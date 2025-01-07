@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="color-scheme" content="light dark" />
+        <title>VSCODE2NPP Theme Converter</title>
+        <meta name="description" content="A VSCode to Notepad++ theme coverter." />
+
+        <!-- PicoCSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+        <!-- Font-Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header class="container">
+            <div class="grid">
+                <hgroup>
+                    <span class="grid">
+                        <h2>VSCODE2NPP Theme Converter</h2>
+                        <a class="AppHeader-logo ml-2" href="https://github.com/" data-hotkey="g d"
+                            aria-label="Homepage " data-turbo="false" data-analytics-event="{&quot;category&quot;:&quot;Header&quot;,&quot;action&quot;:&quot;go to
+                        dashboard&quot;,&quot;label&quot;:&quot;icon:logo&quot;}" style="text-align: right;">
+                            <svg height="32" aria-hidden="true" viewBox="0 0 24 24" version="1.1" width="32"
+                                data-view-component="true"
+                                class="octicon octicon-mark-github v-align-middle color-fg-default">
+                                <path
+                                    d="M12.5.75C6.146.75 1 5.896 1 12.25c0 5.089 3.292 9.387 7.863 10.91.575.101.79-.244.79-.546 0-.273-.014-1.178-.014-2.142-2.889.532-3.636-.704-3.866-1.35-.13-.331-.69-1.352-1.18-1.625-.402-.216-.977-.748-.014-.762.906-.014 1.553.834 1.769 1.179 1.035 1.74 2.688 1.25 3.349.948.1-.747.402-1.25.733-1.538-2.559-.287-5.232-1.279-5.232-5.678 0-1.25.445-2.285 1.178-3.09-.115-.288-.517-1.467.115-3.048 0 0 .963-.302 3.163 1.179.92-.259 1.897-.388 2.875-.388.977 0 1.955.13 2.875.388 2.2-1.495 3.162-1.179 3.162-1.179.633 1.581.23 2.76.115 3.048.733.805 1.179 1.825 1.179 3.09 0 4.413-2.688 5.39-5.247 5.678.417.36.776 1.05.776 2.128 0 1.538-.014 2.774-.014 3.162 0 .302.216.662.79.547C20.709 21.637 24 17.324 24 12.25 24 5.896 18.854.75 12.5.75Z">
+                                </path>
+                            </svg>
+                        </a>
+                    </span>
+                    <p>Generates Notepad++ Theme from VSCode Theme (XML Theme, Markdown Theme, and Dark Mode)</p>
+                </hgroup>
+            </div>
+        </header>
+        <!-- ./ Header -->
+
+        <!-- Main -->
+        <main class="container">
+            <!-- How To -->
+            <section id="howToSection" style="font-size: .8em">
+                <article id="howToArticle">
+                    <h5>How To</h5>
+                    <ul>
+                        <li>Open VSCode and select your theme of choice.</li>
+                        <li>Run the following command to generate a color theme:
+                            <kbd>CTRL+P >> Developer: Generate Color Theme From Current Settings</kbd>
+                        </li>
+                        <li>Paste the color theme generated in the text box VSCode Theme (JSON).</li>
+                        <li>Click convert.</li>
+                        <li>Copy Notepad++ Theme (XML) and save it into the Notepad++ themes folder.</li>
+                        <li>You can use the matching dark mode tones to further improve the theme integration.</li>
+                    </ul>
+                    <footer>
+                        <h5>Notes</h5>
+                        <ul>
+                            <li>If you know how to automate the download of the resulting XML automatically
+                                and efficiently, please contact me. All my attempts so far have resulted in a process
+                                that
+                                takes a really long time before the download is triggered.</li>
+                            <li>If you know how to interpret the Dark Mode colors in the config.xml, please let me
+                                know so I can automate the generation of the DarkMode GUIConfig (i.e.
+                                customColorMain="4207662").</li>
+                        </ul>
+                    </footer>
+                </article>
+            </section>
+            <!-- ./ How To -->
+
+            <!-- Form elements -->
+            <section id="settings">
+                <form>
+                    <div class="grid">
+                        <label for="vscodeThemeJson" id="vscodeThemeJsonLabel">Select VSCode JSON
+                            <input type="file" id="vscodeThemeJson" />
+                        </label>
+                        <fieldset>
+                            <label for="mappingJsonDefault" id="mappingJsonDefaultLabel">
+                                <input type="checkbox" id="mappingJsonDefault" role="switch" aria-invalid="false" />
+                                Use custom mapping between VSCode and Notepad++
+                            </label>
+                            <label for="mappingJsonCustom" id="mappingJsonCustomLabel" hidden="hidden">
+                                <input type="file" id="mappingJsonCustom" />
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div class="grid">
+                        <fieldset>
+                            <label for="fontNamefDefault" id="fontNamefDefaultLabel">
+                                <input type="checkbox" id="fontNameDefault" role="switch" aria-invalid="false" />
+                                Use custom font name for Notepad++
+                            </label>
+                            <input type="text" id="fontNameCustomLabel" hidden="hidden" placeholder="Courier New (default)" />
+                        </fieldset>
+                        <fieldset>
+                            <label for="fontSizeDefault" id="fontSizeDefaultLabel">
+                                <input type="checkbox" id="fontSizeDefault" role="switch" aria-invalid="false" />
+                                Use custom font size for Notepad++
+                            </label>
+                            <select id="fontSizeCustomLabel" hidden="hidden" required>
+                                <option value="" selected>Select…</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option selected>11 (default)</option>
+                                <option>14</option>
+                                <option>16</option>
+                                <option>18</option>
+                                <option>20</option>
+                                <option>22</option>
+                                <option>24</option>
+                                <option>26</option>
+                                <option>28</option>
+                            </select>
+                        </fieldset>
+                    </div>
+                </form>
+            </section>
+            <!-- ./ Form elements -->
+
+            <!-- Form elements-->
+            <section id="form">
+                <div class="grid">
+                    <button>VSCode Theme (JSON)</button>
+                    <button>Notepad++ Theme (XML)</button>
+                </div>
+            </section>
+            <!-- ./ Form elements-->
+
+            <!-- Form elements-->
+            <section id="form">
+                <form>
+                    <div class="grid">
+                        <textarea id="vscode_json" name="vscode_json" placeholder="VSCODE Theme (JSON)"
+                            style="height:300px; font-size: .6em;"></textarea>
+                        <textarea id="npp_xml" name="npp_xml" placeholder="Notepad++ Theme (XML)"
+                            style="height: 300px; font-size: .6em;"></textarea>
+                    </div>
+                    <input type="submit" id="convert" value="Convert" class="secondary" />
+                </form>
+            </section>
+            <!-- ./ Form elements-->
+
+            <!-- Preview -->
+            <section id="darkModeSection" style="font-size: .8em">
+                <article id="darkModeArticle">
+                    <h5>Matching Dark Mode Tones</h5>
+                    <kbd>Settings >> Preferences... >> Themes >> Dark Mode >> Tones</kbd>
+                    <br /><br />
+                    <span class="grid">
+                        <label for="color_top" id="label_color_top">Top</label>
+                        <label for="color_text" id="label_color_text">Text</label>
+                        <label for="color_edge" id="label_color_edge">Edge</label>
+                    </span>
+                    <span class="grid">
+                        <input type="color" id="color_top" value="#ffffff" disabled />
+                        <input type="color" id="color_text" value="#ffffff" disabled />
+                        <input type="color" id="color_edge" value="#ffffff" disabled />
+                    </span>
+                    <span class="grid">
+                        <label for="color_menu_hot_track" id="label_color_menu_hot_track">Menu hot track</label>
+                        <label for="color_darker_text" id="label_color_darker_text">Darker text</label>
+                        <label for="color_edge_highlight" id="label_color_edge_highlight">Edge highlight</label>
+                    </span>
+                    <span class="grid">
+                        <input type="color" id="color_menu_hot_track" value="#ffffff" disabled />
+                        <input type="color" id="color_darker_text" value="#ffffff" disabled />
+                        <input type="color" id="color_edge_highlight" value="#ffffff" disabled />
+                    </span>
+                    <span class="grid">
+                        <label for="color_active" id="label_color_active">Active</label>
+                        <label for="color_disabled_text" id="label_color_disabled_text">Disabled text</label>
+                        <label for="color_edge_disabled" id="label_color_edge_disabled">Edge disabled</label>
+                    </span>
+                    <span class="grid">
+                        <input type="color" id="color_active" value="#ffffff" disabled />
+                        <input type="color" id="color_disabled_text" value="#ffffff" disabled />
+                        <input type="color" id="color_edge_disabled" value="#ffffff" disabled />
+                    </span>
+                    <span class="grid">
+                        <label for="color_main" id="label_color_main">Main</label>
+                        <label for="color_link" id="label_color_link">Link</label>
+                        <span></span>
+                    </span>
+                    <span class="grid">
+                        <input type="color" id="color_main" value="#ffffff" disabled />
+                        <input type="color" id="color_link" value="#ffffff" disabled />
+                        <span></span>
+                    </span>
+                    <span class="grid">
+                        <label for="color_error" id="label_color_error">Error</label>
+                        <span></span>
+                        <span></span>
+                    </span>
+                    <span class="grid">
+                        <input type="color" id="color_error" value="#ffffff" disabled />
+                        <span></span>
+                        <span></span>
+                    </span>
+                </article>
+            </section>
+            <!-- ./ Preview -->
+        </main>
+        <!-- ./ Main -->
+
+        <script type="text/javascript">
+            document.getElementById("convert").addEventListener("click", convert);
+            document.getElementById("mappingJsonDefault").addEventListener("click", toggleElement);
+            document.getElementById("fontNameDefault").addEventListener("click", toggleElement);
+            document.getElementById("fontSizeDefault").addEventListener("click", toggleElement);
+
+            function toggleElement(element) {
+                elementDefault = this.id;
+                elementCustomLabel = elementDefault.slice(0, -7) + "CustomLabel";
+                elementCustom = document.getElementById(elementCustomLabel);
+                if (this.checked) {
+                    this.setAttribute("checked", "checked");
+                    elementCustom.removeAttribute("hidden");
+                } else {
+                    this.removeAttribute("checked");
+                    elementCustom.setAttribute("hidden", "hidden");
+                }
+            }
+
+            function convert(event) {
+                event.preventDefault();
+
+                var input_value = document.getElementById("convert").value;
+                document.getElementById("convert").value = "Please wait...";
+
+                $.ajax({
+                    url: "vscode2npp.php",
+                    type: "POST",
+                    data: { vscode_json: document.getElementById("vscode_json").value },
+                    dataType: "json",
+                    success: function (result) {
+                        document.getElementById("npp_xml").innerHTML = result["nppTheme"];
+                        for (tone in result["darkMode"]) {
+                            toneName = tone;
+                            tone = tone.toLowerCase();
+                            tone = tone.replaceAll(" ", "_");
+                            toneColor = "color_" + tone;
+                            toneLabel = "label_color_" + tone;
+                            document.getElementById(toneLabel).textContent = toneName + ": " + result["darkMode"][toneName]["rgb"];
+                            document.getElementById(toneColor).value = result["darkMode"][toneName]["hex"];
+                            document.getElementById(toneColor).setAttribute("style", "opacity: 100");
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        document.getElementById("npp_xml").value = error;
+                    },
+                    complete: function (xhr, status) {
+                        document.getElementById("convert").value = input_value;
+                    }
+                });
+            }
+        </script>
+
+        <!-- Footer -->
+        <footer class="container">
+            <small>Built with <a href="https://picocss.com">Pico</a> • 2024</small>
+        </footer>
+        <!-- ./ Footer -->
+
+        <!-- Minimal theme switcher -->
+        <script src="./vendor/picocss/js/minimal-theme-switcher.js"></script>
+
+        <!-- Modal -->
+        <script src="./vendor/picocss/js/modal.js"></script>
+
+        <!-- jQuery -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,1935 @@
+{
+	"DarkModeTones": {
+		"Top": {
+			"color": "editor.background"
+		},
+		"Menu Hot Track": {
+			"color": "button.background"
+		},
+		"Active": {
+			"color": "editor.background"
+		},
+		"Main": {
+			"color": "statusBar.background"
+		},
+		"Error": {
+			"color": "editorError.foreground"
+		},
+		"Text": {
+			"color": "button.foreground"
+		},
+		"Darker Text": {
+			"color": "button.secondaryForeground"
+		},
+		"Disabled Text": {
+			"color": "editorGhostText.foreground"
+		},
+		"Link": {
+			"color": "panelTitle.activeForeground"
+		},
+		"Edge": {
+			"color": "button.background"
+		},
+		"Edge Highlight": {
+			"color": "button.secondaryForeground"
+		},
+		"Edge Disabled": {
+			"color": "button.background"
+		}
+	},
+	"WidgetStyle": {
+		"Current line background colour": {
+			"bgColor": "editor.lineHighlightBackground"
+		},
+		"Active tab focused indicator": {
+			"fgColor": "tab.activeBorder"
+		},
+		"Active tab text": {
+			"fgColor": "tab.activeForeground"
+		},
+		"Active tab unfocused indicator": {
+			"fgColor": "tab.unfocusedInactiveModifiedBorder"
+		},
+		"Bad brace colour": {
+			"fgColor": "log.error"
+		},
+		"Bookmark margin": {
+			"bgColor": "editorGutter.background"
+		},
+		"Brace highlight style": {
+			"fgColor": "editorBracketHighlight.foreground4"
+		},
+		"Caret colour": {
+			"fgColor": "editorCursor.foreground"
+		},
+		"Change History margin": {
+			"bgColor": "editorGutter.background"
+		},
+		"Change History modified": {
+			"bgColor": "scmGraph.historyItemHoverAdditionsForeground",
+			"fgColor": "scmGraph.historyItemHoverAdditionsForeground"
+		},
+		"Change History revert modified": {
+			"bgColor": "scmGraph.historyItemHoverDeletionsForeground",
+			"fgColor": "scmGraph.historyItemHoverDeletionsForeground"
+		},
+		"Change History revert origin": {
+			"bgColor": "scmGraph.historyItemBaseRefColor",
+			"fgColor": "scmGraph.historyItemBaseRefColor"
+		},
+		"Change History saved": {
+			"bgColor": "scmGraph.historyItemRefColor",
+			"fgColor": "scmGraph.historyItemRefColor"
+		},
+		"Default Style": {
+			"bgColor": "editor.background",
+			"fgColor": "editor.foreground"
+		},
+		"Document map": {
+			"bgColor": "editor.background",
+			"fgColor": "minimap.selectionHighlight"
+		},
+		"EOL custom color": {
+			"fgColor": "punctuation"
+		},
+		"Edge colour": {
+			"fgColor": "editorRuler.foreground"
+		},
+		"Find Mark Style": {
+			"bgColor": "editorSuggestWidget.selectedBackground"
+		},
+		"Find status: Message": {
+			"fgColor": "editorMarkerNavigationInfo.background"
+		},
+		"Find status: Not found": {
+			"fgColor": "editorMarkerNavigationError.background"
+		},
+		"Find status: Search end reached": {
+			"fgColor": "editorMarkerNavigationWarning.background"
+		},
+		"Fold": {
+			"bgColor": "editorGutter.background",
+			"fgColor": "editorGutter.foldingControlForeground"
+		},
+		"Fold active": {
+			"fgColor": "editor.findMatchBorder"
+		},
+		"Fold margin": {
+			"bgColor": "editor.background",
+			"fgColor": "editor.background"
+		},
+		"Global override": {
+			"bgColor": "editor.background",
+			"fgColor": "editor.foreground"
+		},
+		"Inactive tabs": {
+			"bgColor": "tab.inactiveModifiedBorder",
+			"fgColor": "tab.inactiveForeground"
+		},
+		"Incremental highlight all": {
+			"bgColor": "editorSuggestWidget.selectedBackground"
+		},
+		"Indent guideline style": {
+			"bgColor": "editor.background",
+			"fgColor": "editorLineNumber.foreground"
+		},
+		"Line number margin": {
+			"bgColor": "editor.background",
+			"fgColor": "editorLineNumber.foreground"
+		},
+		"Mark Style 1": {
+			"bgColor": "editorBracketHighlight.foreground1"
+		},
+		"Mark Style 2": {
+			"bgColor": "editorBracketHighlight.foreground2"
+		},
+		"Mark Style 3": {
+			"bgColor": "editorBracketHighlight.foreground3"
+		},
+		"Mark Style 4": {
+			"bgColor": "editorBracketHighlight.foreground4"
+		},
+		"Mark Style 5": {
+			"bgColor": "editorBracketHighlight.foreground5"
+		},
+		"Multi-edit carets color": {
+			"fgColor": "editorCursor.foreground"
+		},
+		"Multi-selected text color": {
+			"bgColor": "editor.selectionBackground"
+		},
+		"Non-printing characters custom color": {
+			"fgColor": "editorWhitespace.foreground"
+		},
+		"Selected text colour": {
+			"bgColor": "editorGhostText.foreground",
+			"fgColor": "editorGhostText.foreground"
+		},
+		"Smart Highlighting": {
+			"bgColor": "editorSuggestWidget.foreground"
+		},
+		"Tab color 1": {
+			"fgColor": "editorBracketHighlight.foreground1"
+		},
+		"Tab color 2": {
+			"fgColor": "editorBracketHighlight.foreground2"
+		},
+		"Tab color 3": {
+			"fgColor": "editorBracketHighlight.foreground3"
+		},
+		"Tab color 4": {
+			"fgColor": "editorBracketHighlight.foreground4"
+		},
+		"Tab color 5": {
+			"fgColor": "editorBracketHighlight.foreground5"
+		},
+		"Tab color dark mode 1": {
+			"fgColor": "editorBracketHighlight.foreground1"
+		},
+		"Tab color dark mode 2": {
+			"fgColor": "editorBracketHighlight.foreground2"
+		},
+		"Tab color dark mode 3": {
+			"fgColor": "editorBracketHighlight.foreground3"
+		},
+		"Tab color dark mode 4": {
+			"fgColor": "editorBracketHighlight.foreground4"
+		},
+		"Tab color dark mode 5": {
+			"fgColor": "editorBracketHighlight.foreground5"
+		},
+		"Tags attribute": {
+			"fgColor": "entity.name.tag"
+		},
+		"Tags match highlighting": {
+			"bgColor": "editor.selectionBackground"
+		},
+		"URL hovered": {
+			"fgColor": "editorLink.activeForeground",
+			"fontSize": "markup.underline.link"
+		},
+		"White space symbol": {
+			"fgColor": "editorWhitespace.foreground"
+		}
+	},
+	"WordsStyle": {
+		"Hit Word": {
+			"bgColor": "editor.findMatchHighlightBackground",
+			"fgColor": "editorBracketHighlight.foreground3",
+			"fontStyle": "markup.bold"
+		},
+		"Line Number": {
+			"bgColor": "editor.background",
+			"fgColor": "editorLineNumber.activeForeground"
+		},
+		"Search Header": {
+			"bgColor": "editor.background",
+			"fgColor": "editorBracketHighlight.foreground3",
+			"fontStyle": "markup.bold"
+		},
+		"File Header": {
+			"bgColor": "editor.background",
+			"fgColor": "editorBracketHighlight.foreground2",
+			"fontStyle": "markup.bold"
+		},
+		"Current line background colour": {
+			"bgColor": "editor.lineHighlightBackground"
+		},
+		"#IFDEF DOC AND #ENDIF": {
+			"fgColor": "punctuation.definition.group"
+		},
+		"A-RATE VARIABLE": {
+			"fgColor": "variable"
+		},
+		"ADDED": {
+			"fgColor": "entity.name.function.operator"
+		},
+		"ADDED KEY": {
+			"fgColor": "entity.name"
+		},
+		"ADDRESSFIELD_UNKNOWN": {
+			"fgColor": "token.error-token"
+		},
+		"ADVERB": {
+			"fontStyle": "log.verbose"
+		},
+		"AFTER LABEL": {
+			"fgColor": "entity.name.label"
+		},
+		"ALIAS": {
+			"fgColor": "entity.name.function.operator"
+		},
+		"ANNOTATION": {
+			"fgColor": "keyword.operator.type.annotation"
+		},
+		"ANONYMOUS": {
+			"fgColor": "variable.other.constant"
+		},
+		"ANY OTHER TEXT": {
+			"fgColor": "text"
+		},
+		"ARRAY": {
+			"fgColor": "meta.type storage.modifier.array"
+		},
+		"ASM": {
+			"fgColor": "variable.other.event"
+		},
+		"ASP SYMBOL": {
+			"fgColor": "variable.parameter",
+			"fontStyle": "variable.parameter"
+		},
+		"ASSIGN": {
+			"fgColor": "entity.name.function.operator"
+		},
+		"ASSIGNMENT": {
+			"fgColor": "entity.name.function.operator"
+		},
+		"ASSOCIATIVE": {
+			"fgColor": "entity.name.function.operator"
+		},
+		"ASTERISK": {
+			"fgColor": "entity.name.function.operator"
+		},
+		"ATOM": {
+			"fgColor": "variable.other.constant"
+		},
+		"ATOM QUOTED": {
+			"fgColor": "string"
+		},
+		"ATTRIBUTE": {
+			"fgColor": "entity.other.attribute-name",
+			"fontStyle": "entity.other.attribute-name"
+		},
+		"ATTRIBUTE UNKNOWN": {
+			"fgColor": "token.error-token"
+		},
+		"ATTRIBUTES": {
+			"fgColor": "entity.other.attribute-name",
+			"fontStyle": "entity.other.attribute-name"
+		},
+		"BACKTICKS": {
+			"fgColor": "string"
+		},
+		"BAD STRING CHAR": {
+			"fgColor": "token.error-token"
+		},
+		"BASE WORD": {
+			"fgColor": "string"
+		},
+		"BASE85 STRING": {
+			"fgColor": "string"
+		},
+		"BINARY": {
+			"fgColor": "entity.name.operator.custom-literal.number"
+		},
+		"BINARY ( 16#{1A803F59} )": {
+			"fgColor": "entity.name.operator.custom-literal.number"
+		},
+		"BINNUMBER": {
+			"fgColor": "entity.name.operator.custom-literal.number"
+		},
+		"BLOCK COMMENT": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"BLOCK DOC COMMENT": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"BLOCKQUOTE": {
+			"fgColor": "string"
+		},
+		"BOOL": {
+			"fgColor": "constant"
+		},
+		"BRACES": {
+			"fgColor": "meta.brace.round"
+		},
+		"BUILIN FUNC &amp; TYPE": {
+			"fgColor": "entity.name.function"
+		},
+		"BUILT-IN FUNCTIONS": {
+			"fgColor": "entity.name.function"
+		},
+		"BUILTINS": {
+			"fgColor": "support.function.builtin.python"
+		},
+		"BYTE CHARACTER": {
+			"fgColor": "string"
+		},
+		"BYTE STRING": {
+			"fgColor": "string"
+		},
+		"BYTECOUNT": {
+			"fgColor": "string"
+		},
+		"BYTECOUNT_WRONG": {
+			"fgColor": "token.error-token"
+		},
+		"CALLABLE": {
+			"fgColor": "entity.name.function"
+		},
+		"CAPITAL": {
+			"fgColor": "variable.other.member"
+		},
+		"CDATA": {
+			"fgColor": "keyword.operator.table.row.restructuredtext keyword.operator.table.data.restructuredtext"
+		},
+		"CHAR": {
+			"fgColor": "string"
+		},
+		"CHARACTER": {
+			"fgColor": "string"
+		},
+		"CHARACTER ESCAPE ERROR": {
+			"fgColor": "token.error-token"
+		},
+		"CHARACTER TOO MANY": {
+			"fgColor": "token.error-token"
+		},
+		"CHARACTERS": {
+			"fgColor": "string"
+		},
+		"CHECKSUM": {
+			"fgColor": "entity.name.operator.custom-literal.number"
+		},
+		"CHECKSUM_WRONG": {
+			"fgColor": "token.error-token"
+		},
+		"CLASS": {
+			"fgColor": "entity.name.class"
+		},
+		"CLASS NAME": {
+			"fgColor": "entity.name.class"
+		},
+		"CLASS NAME DEFINITION": {
+			"fgColor": "entity.name.class"
+		},
+		"CLASS VAR": {
+			"fgColor": "entity.name.class"
+		},
+		"CLIP PROPERTIES": {
+			"fgColor": "variable.other.property"
+		},
+		"CMDLET": {
+			"fgColor": "terminal.foreground"
+		},
+		"CODE": {
+			"fgColor": "variable.other.event"
+		},
+		"CODE2": {
+			"fgColor": "variable.other.event"
+		},
+		"CODEBLOCK": {
+			"fgColor": "punctuation.definition.block"
+		},
+		"COL NAME": {
+			"fgColor": "keyword.operator.table.row.restructuredtext keyword.operator.table.data.restructuredtext"
+		},
+		"COL NAME IN []&apos;s": {
+			"fgColor": "keyword.operator.table.row.restructuredtext keyword.operator.table.data.restructuredtext"
+		},
+		"COMMAND": {
+			"fgColor": "terminal.foreground"
+		},
+		"COMMAND OPTIONAL ARGUMENT": {
+			"fgColor": "variable.language.arguments"
+		},
+		"COMMENT": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"COMMENT BLOCK": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"COMMENT BLOCK2": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"COMMENT BLOCK3": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"COMMENT BOX": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"COMMENT DOC": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"COMMENT DOC KEYWORD": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"COMMENT DOC KEYWORD ERROR": {
+			"fgColor": "token.error-token"
+		},
+		"COMMENT EMBED": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"COMMENT KEY": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"COMMENT KEY ERROR": {
+			"fgColor": "token.error-token"
+		},
+		"COMMENT LINE": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"COMMENT LINE BANG": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"COMMENT LINE DOC": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"COMMENT NESTED": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"COMMENT OTHERWISE": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"COMMENT PASCAL": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"COMMENT STREAM": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"COMMENT-BLOCKS": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"COMMENT: /* */": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"COMMENT: [* *]": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"COMOBJ": {
+			"fgColor": "variable.other.event"
+		},
+		"COMPACT IRI": {
+			"fgColor": "variable.other.event"
+		},
+		"COMPLEX VARIABLE": {
+			"fgColor": "variable"
+		},
+		"CONSTANT": {
+			"fgColor": "constant"
+		},
+		"CONSTANT LITERAL": {
+			"fgColor": "constant"
+		},
+		"CONTINUATION": {
+			"fgColor": "variable.other.member"
+		},
+		"CONTROL": {
+			"fgColor": "keyword.control"
+		},
+		"CORE API": {
+			"fgColor": "variable.other.event"
+		},
+		"CPU INSTRUCTION": {
+			"fgColor": "entity.name.function"
+		},
+		"DATA": {
+			"fgColor": "keyword.operator.table.row.restructuredtext keyword.operator.table.data.restructuredtext"
+		},
+		"DATA SECTION": {
+			"fgColor": "entity.name.operator.custom-literal"
+		},
+		"DATA TYPE": {
+			"fgColor": "entity.name.type"
+		},
+		"DATAADDRESS": {
+			"fgColor": "keyword.operator.table.row.restructuredtext keyword.operator.table.data.restructuredtext"
+		},
+		"DATA_EMPTY": {
+			"fgColor": "keyword.operator.table.row.restructuredtext keyword.operator.table.data.restructuredtext"
+		},
+		"DATA_EVEN": {
+			"fgColor": "keyword.operator.table.row.restructuredtext keyword.operator.table.data.restructuredtext"
+		},
+		"DATA_ODD": {
+			"fgColor": "keyword.operator.table.row.restructuredtext keyword.operator.table.data.restructuredtext"
+		},
+		"DATA_UNKNOWN": {
+			"fgColor": "token.error-token"
+		},
+		"DATE": {
+			"fgColor": "source.git-show.date"
+		},
+		"DATE { 17-FEB-2004 1/3/99 }": {
+			"fgColor": "source.git-show.date"
+		},
+		"DATETIME": {
+			"fgColor": "source.git-show.date"
+		},
+		"DECLARATION": {
+			"fgColor": "constant"
+		},
+		"DECORATOR": {
+			"fgColor": "variable.other.member"
+		},
+		"DECORATORS": {
+			"fgColor": "variable.other.member"
+		},
+		"DEF NAME": {
+			"fgColor": "punctuation.definition.group"
+		},
+		"DEFAULT": {
+			"fgColor": "variable.other.member"
+		},
+		"DEFAULT COMMENT": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"DEFAULT STYLE": {
+			"fgColor": "variable.other.member"
+		},
+		"DEFAULT TEXT STYLE": {
+			"fgColor": "text"
+		},
+		"DEFVAL": {
+			"fgColor": "punctuation.definition.group"
+		},
+		"DEFWORDS": {
+			"fgColor": "punctuation.definition.group"
+		},
+		"DELETED": {
+			"fgColor": "markup.deleted"
+		},
+		"DELIMITER": {
+			"fgColor": "meta.delimiter.comma.js"
+		},
+		"DESCRIPTORS": {
+			"fgColor": "variable.other.member"
+		},
+		"DIRECTIVE": {
+			"fgColor": "keyword.control.directive"
+		},
+		"DIRECTIVE OPERAND": {
+			"fgColor": "keyword.control.directive"
+		},
+		"DIVISION BETWEEN LABEL AND OPCODE": {
+			"fgColor": "entity.name.label"
+		},
+		"DIVISION BETWEEN OPCODE AND OPERANDS": {
+			"fgColor": "entity.name.function.operator"
+		},
+		"DIVISION OF OPERANDS": {
+			"fgColor": "entity.name.function.operator"
+		},
+		"DIVSION OF LEADING WHITESPACE IN LINE": {
+			"fgColor": "entity.name.function.operator"
+		},
+		"DLL FUNCTIONS": {
+			"fgColor": "entity.name.function"
+		},
+		"DOC COMMENT": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"DOCUMENT": {
+			"fgColor": "variable.other.member"
+		},
+		"DOCUMENTATION HELPER IN COMMENT": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"DOCUMENTATION MACRO IN COMMENT": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"DOMAIN DEFINITIONS": {
+			"fgColor": "punctuation.definition.group"
+		},
+		"DOUBLE QUOTE STRING": {
+			"fgColor": "string"
+		},
+		"DOUBLE QUOTED STRING": {
+			"fgColor": "string"
+		},
+		"DOUBLE STRING": {
+			"fgColor": "string"
+		},
+		"DSC COMMENT": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"DSC VALUE": {
+			"fgColor": "entity.name.type.class.value"
+		},
+		"EM1 (ITALIC)": {
+			"fontStyle": "markup.italic"
+		},
+		"EM2 (UNDERLINE)": {
+			"fontStyle": "markup.underline"
+		},
+		"EMAIL { JOE@MAIL.DOM }": {
+			"fgColor": "editorLink.activeForeground",
+			"fontSize": "markup.underline.link"
+		},
+		"END OF LINE WHERE STRING IS NOT CLOSED": {
+			"fgColor": "token.error-token"
+		},
+		"ENTITY": {
+			"fgColor": "entity.name.label"
+		},
+		"ENUM DOMAINS": {
+			"fgColor": "variable.other.enummember"
+		},
+		"ENVIRONMENT VARIABLE": {
+			"fgColor": "variable"
+		},
+		"ERROR": {
+			"fgColor": "token.error-token"
+		},
+		"ESCAPE CHAR": {
+			"fgColor": "string"
+		},
+		"ESCAPE SEQUENCE": {
+			"fgColor": "string"
+		},
+		"ESCAPED CHARACTERS IN STRINGS": {
+			"fgColor": "string"
+		},
+		"ESCAPESEQUENCE": {
+			"fgColor": "string"
+		},
+		"EVENT": {
+			"fgColor": "variable.other.event"
+		},
+		"EXPAND": {
+			"fgColor": "variable.other.event"
+		},
+		"EXT INSTRUCTION": {
+			"fgColor": "entity.name.function"
+		},
+		"EXTENDEDADDRESS": {
+			"fgColor": "variable.other.constant"
+		},
+		"F CHARACTER": {
+			"fgColor": "string"
+		},
+		"F STRING": {
+			"fgColor": "string"
+		},
+		"F TRIPLE": {
+			"fgColor": "entity.name.operator.custom-literal.number"
+		},
+		"F TRIPLEDOUBLE": {
+			"fgColor": "entity.name.operator.custom-literal.number"
+		},
+		"FILE { %/C/WINNT/SOME.DLL }": {
+			"fgColor": "editorLink.activeForeground",
+			"fontSize": "markup.underline.link"
+		},
+		"FILTER": {
+			"fgColor": "variable.other.event"
+		},
+		"FOREACHDEF": {
+			"fgColor": "punctuation.definition.group"
+		},
+		"FORMAT BODY": {
+			"fgColor": "variable.other.event"
+		},
+		"FORMAT IDENTIFIER": {
+			"fgColor": "meta.attribute.id.html string"
+		},
+		"FUNC NAME": {
+			"fgColor": "entity.name.function"
+		},
+		"FUNC1": {
+			"fgColor": "entity.name.function"
+		},
+		"FUNC2": {
+			"fgColor": "entity.name.function"
+		},
+		"FUNC3": {
+			"fgColor": "entity.name.function"
+		},
+		"FUNCS AND METHODS 1": {
+			"fgColor": "entity.name.function"
+		},
+		"FUNCS AND METHODS 2": {
+			"fgColor": "entity.name.function"
+		},
+		"FUNCTION": {
+			"fgColor": "entity.name.function"
+		},
+		"FUNCTION COMMENT": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"FUNCTION DEFINITIONS": {
+			"fgColor": "entity.name.function"
+		},
+		"FUNCTION NAME": {
+			"fgColor": "entity.name.function"
+		},
+		"FUNCTION OR METHOD NAME DEFINITION": {
+			"fgColor": "entity.name.function"
+		},
+		"FUNCTION WORD": {
+			"fgColor": "entity.name.function"
+		},
+		"FUNCTION WORD2": {
+			"fgColor": "entity.name.function"
+		},
+		"FUNCTION1": {
+			"fgColor": "entity.name.function"
+		},
+		"FUNCTION2": {
+			"fgColor": "entity.name.function"
+		},
+		"FUNCTIONS": {
+			"fgColor": "entity.name.function"
+		},
+		"FUNCTIONS ABRIDGED": {
+			"fgColor": "entity.name.function"
+		},
+		"GARBAGE": {
+			"fgColor": "variable.other.member"
+		},
+		"GLOBAL": {
+			"fgColor": "constant"
+		},
+		"GLOBAL VARIABLE": {
+			"fgColor": "constant"
+		},
+		"GRAMMAR": {
+			"fgColor": "variable.other.event"
+		},
+		"GROUP": {
+			"fgColor": "punctuation.definition.block"
+		},
+		"GUID IN KEY PATH": {
+			"fgColor": "source.json meta.mapping.key string"
+		},
+		"GUID IN STRING": {
+			"fgColor": "source.json meta.mapping.key string"
+		},
+		"H1": {
+			"fgColor": "variable.other.constant"
+		},
+		"H2": {
+			"fgColor": "variable.other.constant"
+		},
+		"H3": {
+			"fgColor": "variable.other.constant"
+		},
+		"H4": {
+			"fgColor": "variable.other.constant"
+		},
+		"H5": {
+			"fgColor": "variable.other.constant"
+		},
+		"H6": {
+			"fgColor": "variable.other.constant"
+		},
+		"HASH": {
+			"fgColor": "variable.other.constant"
+		},
+		"HEADER": {
+			"fgColor": "markup.heading"
+		},
+		"HEADER STATEMENT": {
+			"fgColor": "markup.heading"
+		},
+		"HERE CHARACTER": {
+			"fgColor": "string"
+		},
+		"HERE DELIM": {
+			"fgColor": "meta.delimiter.comma.js"
+		},
+		"HERE Q": {
+			"fgColor": "variable.other.member"
+		},
+		"HERE STRING": {
+			"fgColor": "string"
+		},
+		"HEREDOC BACKTICK": {
+			"fgColor": "string"
+		},
+		"HEREDOC DELIMITER": {
+			"fgColor": "meta.delimiter.comma.js"
+		},
+		"HEREDOC DOUBLEQUOTE": {
+			"fgColor": "string"
+		},
+		"HEREDOC Q": {
+			"fgColor": "variable.other.member"
+		},
+		"HEREDOC QQ": {
+			"fgColor": "variable.other.member"
+		},
+		"HEREDOC SINGLEQUOTE": {
+			"fgColor": "string"
+		},
+		"HEX DIGIT": {
+			"fgColor": "entity.other.git-status.hex"
+		},
+		"HEX NUMBER": {
+			"fgColor": "entity.other.git-status.hex"
+		},
+		"HEX STRING": {
+			"fgColor": "entity.other.git-status.hex"
+		},
+		"HEXADECIMAL NUMBER": {
+			"fgColor": "entity.other.git-status.hex"
+		},
+		"HEXNUMBER": {
+			"fgColor": "entity.other.git-status.hex"
+		},
+		"HIDE SYMBOL": {
+			"fgColor": "variable.parameter",
+			"fontStyle": "variable.parameter"
+		},
+		"HIGHLIGHTED IDENTIFIERS": {
+			"fgColor": "meta.attribute.id.html string"
+		},
+		"HRULE": {
+			"fgColor": "variable.other.constant"
+		},
+		"I-RATE VARIABLE": {
+			"fgColor": "variable"
+		},
+		"ID": {
+			"fgColor": "meta.attribute.id.html string"
+		},
+		"IDENTIFIER": {
+			"fgColor": "meta.attribute.id.html string"
+		},
+		"IDENTIFIERS": {
+			"fgColor": "meta.attribute.id.html string"
+		},
+		"IDEOL": {
+			"fgColor": "meta.attribute.id.html string"
+		},
+		"IF DEFINE": {
+			"fgColor": "punctuation.definition.group"
+		},
+		"IFDEF": {
+			"fgColor": "punctuation.definition.group"
+		},
+		"ILLEGAL": {
+			"fgColor": "token.error-token"
+		},
+		"IMMEVAL": {
+			"fgColor": "variable.other.member"
+		},
+		"IMPORT": {
+			"fgColor": "storage.modifier.import.java"
+		},
+		"IMPORTANT": {
+			"fgColor": "token.error-token"
+		},
+		"IN QUOTE": {
+			"fgColor": "string"
+		},
+		"INFIX": {
+			"fgColor": "variable.other.member"
+		},
+		"INFIXEOL": {
+			"fgColor": "variable.other.member"
+		},
+		"INSTANCE": {
+			"fgColor": "meta.instance.constructor"
+		},
+		"INSTANCE VAR": {
+			"fgColor": "meta.instance.constructor"
+		},
+		"INSTR": {
+			"fgColor": "entity.name.function"
+		},
+		"INSTRUCTION": {
+			"fgColor": "entity.name.function"
+		},
+		"INSTRUCTION WORD": {
+			"fgColor": "entity.name.function"
+		},
+		"ISSUE { #123-CD-456 }": {
+			"fgColor": "variable.other.constant"
+		},
+		"K-RATE VARIABLE": {
+			"fgColor": "variable"
+		},
+		"KEY": {
+			"fgColor": "entity.other.attribute-name"
+		},
+		"KEYWORD": {
+			"fgColor": "keyword"
+		},
+		"KEYWORD (ALL)": {
+			"fgColor": "editorBracketHighlight.foreground1"
+		},
+		"KEYWORD (DATATYPES)": {
+			"fgColor": "editorBracketHighlight.foreground2"
+		},
+		"KEYWORD (TEST FUNCTIONS)": {
+			"fgColor": "editorBracketHighlight.foreground4"
+		},
+		"KEYWORD 4": {
+			"fgColor": "editorBracketHighlight.foreground4"
+		},
+		"KEYWORD 5": {
+			"fgColor": "editorBracketHighlight.foreground5"
+		},
+		"KEYWORD 6": {
+			"fgColor": "editorBracketHighlight.foreground6"
+		},
+		"KEYWORD 7": {
+			"fgColor": "editorBracketHighlight.foreground1"
+		},
+		"KEYWORD PASCAL": {
+			"fgColor": "keyword"
+		},
+		"KEYWORD USER": {
+			"fgColor": "keyword"
+		},
+		"KEYWORD1": {
+			"fgColor": "editorBracketHighlight.foreground1"
+		},
+		"KEYWORD2": {
+			"fgColor": "editorBracketHighlight.foreground2"
+		},
+		"KEYWORD3": {
+			"fgColor": "editorBracketHighlight.foreground3"
+		},
+		"KEYWORD4": {
+			"fgColor": "editorBracketHighlight.foreground4"
+		},
+		"KEYWORD5": {
+			"fgColor": "editorBracketHighlight.foreground5"
+		},
+		"KEYWORD6": {
+			"fgColor": "editorBracketHighlight.foreground6"
+		},
+		"KEYWORDS": {
+			"fgColor": "keyword"
+		},
+		"KEYWORDS 1": {
+			"fgColor": "editorBracketHighlight.foreground1"
+		},
+		"KEYWORDS 2": {
+			"fgColor": "editorBracketHighlight.foreground2"
+		},
+		"KEYWORDS 3": {
+			"fgColor": "editorBracketHighlight.foreground3"
+		},
+		"KEYWORDS 4": {
+			"fgColor": "editorBracketHighlight.foreground4"
+		},
+		"KEYWORDS 5": {
+			"fgColor": "editorBracketHighlight.foreground5"
+		},
+		"KEYWORDS 6": {
+			"fgColor": "editorBracketHighlight.foreground6"
+		},
+		"KEYWORDS 7": {
+			"fgColor": "editorBracketHighlight.foreground7"
+		},
+		"KEYWORDS2": {
+			"fgColor": "editorBracketHighlight.foreground2"
+		},
+		"KEYWORDS3": {
+			"fgColor": "editorBracketHighlight.foreground3"
+		},
+		"KWS END": {
+			"fgColor": "variable.other.member"
+		},
+		"LABEL": {
+			"fgColor": "entity.name.label"
+		},
+		"LABEL TO JUMP TO WITH THE GOTO STATEMENT": {
+			"fgColor": "entity.name.label"
+		},
+		"LANGUAGE NATIVE KEYWORD OR RESERVED WORD": {
+			"fgColor": "keyword"
+		},
+		"LD KEYWORD": {
+			"fgColor": "keyword"
+		},
+		"LEGACY PSEUDOELEMENT": {
+			"fgColor": "entity.other.pseudo-class.css",
+			"fontStyle": "entity.other.pseudo-class.css"
+		},
+		"LEXICAL ERROR": {
+			"fgColor": "token.error-token"
+		},
+		"LIFETIME": {
+			"fgColor": "entity.name.lifetime.rust"
+		},
+		"LINE COMMENT": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"LINE COMMENT: #": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"LINE DOC COMMENT": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"LINENUM": {
+			"fgColor": "variable.other.member"
+		},
+		"LINK": {
+			"fgColor": "editorLink.activeForeground",
+			"fontSize": "markup.underline.link"
+		},
+		"LITERAL": {
+			"fgColor": "entity.name.operator.custom-literal"
+		},
+		"LITERAL STRING": {
+			"fgColor": "entity.name.operator.custom-literal.string"
+		},
+		"LOCALE": {
+			"fgColor": "variable.other.event"
+		},
+		"MACRO": {
+			"fgColor": "variable.other.event"
+		},
+		"MACRO QUOTED": {
+			"fgColor": "string"
+		},
+		"MACRODEF": {
+			"fgColor": "punctuation.definition.group"
+		},
+		"MAIN SECTIONS": {
+			"fgColor": "entity.name.operator.custom-literal"
+		},
+		"MAJOR": {
+			"fgColor": "variable.other.member"
+		},
+		"MATH BLOCK": {
+			"fgColor": "entity.name.function"
+		},
+		"MATH INLINE": {
+			"fgColor": "entity.name.function"
+		},
+		"MATH INSTRUCTION": {
+			"fgColor": "entity.name.function"
+		},
+		"MEDIA": {
+			"fgColor": "variable.other.member"
+		},
+		"MINOR": {
+			"fgColor": "variable.other.member"
+		},
+		"ML COMMENT": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"MODIFICATORS": {
+			"fgColor": "storage.modifier",
+			"fontStyle": "storage.modifier"
+		},
+		"MODIFIER": {
+			"fgColor": "storage.modifier",
+			"fontStyle": "storage.modifier"
+		},
+		"MODULE": {
+			"fgColor": "variable.other.event"
+		},
+		"MODULE ATTRIBUTES": {
+			"fgColor": "entity.other.attribute-name",
+			"fontStyle": "entity.other.attribute-name"
+		},
+		"MODULE COMMENT": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"MODULE NAME": {
+			"fgColor": "variable.other.event"
+		},
+		"MONEY": {
+			"fgColor": "entity.name.operator.custom-literal.number"
+		},
+		"MU": {
+			"fgColor": "variable.other.member"
+		},
+		"MULTI-LINE COMMENT": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"NIL": {
+			"fgColor": "variable.other.member"
+		},
+		"NOADDRESS": {
+			"fgColor": "token.error-token"
+		},
+		"NODE NAME": {
+			"fgColor": "variable.other.member"
+		},
+		"NODE NAME QUOTED": {
+			"fgColor": "string"
+		},
+		"NODEPATH": {
+			"fgColor": "variable.other.member"
+		},
+		"NON OID NUMBERS": {
+			"fgColor": "entity.name.operator.custom-literal.number"
+		},
+		"NUMBER": {
+			"fgColor": "entity.name.operator.custom-literal.number"
+		},
+		"NUMERIC OID DEFINITION": {
+			"fgColor": "entity.name.operator.custom-literal.number"
+		},
+		"Name": {
+			"fgColor": "variable.other.member"
+		},
+		"OBJECT DEFINITIONS": {
+			"fgColor": "meta.object.member"
+		},
+		"OBJECT METHOD": {
+			"fgColor": "meta.object.member"
+		},
+		"OBJECT PROPERTY": {
+			"fgColor": "meta.object.member"
+		},
+		"OLIST": {
+			"fgColor": "variable.other.constant"
+		},
+		"OPCODE": {
+			"fgColor": "variable.other.event"
+		},
+		"OPERATOR": {
+			"fgColor": "entity.name.function.operator"
+		},
+		"OPERATOR2": {
+			"fgColor": "entity.name.function.operator"
+		},
+		"OPERATOR; EITHER SYMBOLIC OR LITERAL": {
+			"fgColor": "entity.name.function.operator"
+		},
+		"OPERATORS": {
+			"fgColor": "entity.name.function.operator"
+		},
+		"OPERATORS (DELIMITERS)": {
+			"fgColor": "meta.delimiter.comma.js"
+		},
+		"OPTION": {
+			"fgColor": "variable.other.member"
+		},
+		"PAGE EX": {
+			"fgColor": "variable.other.member"
+		},
+		"PAIR ( 800X600 )": {
+			"fgColor": "entity.name.operator.custom-literal.number"
+		},
+		"PARAM": {
+			"fgColor": "variable.parameter",
+			"fontStyle": "variable.parameter"
+		},
+		"PARAMETER": {
+			"fgColor": "variable.parameter",
+			"fontStyle": "variable.parameter"
+		},
+		"PAREN ARRAY": {
+			"fgColor": "meta.type storage.modifier.array"
+		},
+		"PAREN DICT": {
+			"fgColor": "variable.other.member"
+		},
+		"PAREN PROC": {
+			"fgColor": "entity.name.constant.preprocessor"
+		},
+		"PLUGIN": {
+			"fgColor": "variable.other.event"
+		},
+		"PLUGIN API": {
+			"fgColor": "variable.other.event"
+		},
+		"PLUGIN METHOD": {
+			"fgColor": "variable.other.event"
+		},
+		"POD": {
+			"fgColor": "variable.other.member"
+		},
+		"POD VERBATIM": {
+			"fontStyle": "log.verbose"
+		},
+		"POSITION": {
+			"fgColor": "variable.other.member"
+		},
+		"POSITIONAL": {
+			"fgColor": "variable.other.member"
+		},
+		"POSTPROC": {
+			"fgColor": "entity.name.constant.preprocessor"
+		},
+		"PRECHAR (NOT USED)": {
+			"fgColor": "token.error-token"
+		},
+		"PREDECLARED IDENTIFIERS": {
+			"fgColor": "constant"
+		},
+		"PREDEFINED": {
+			"fgColor": "constant"
+		},
+		"PREDEFINED ATTRIBUTES": {
+			"fgColor": "constant"
+		},
+		"PREDEFINED CONSTANT": {
+			"fgColor": "constant"
+		},
+		"PREDEFINED VARIABLE": {
+			"fgColor": "constant"
+		},
+		"PREFACE": {
+			"fgColor": "variable.other.member"
+		},
+		"PREPROC": {
+			"fgColor": "entity.name.function.preprocessor"
+		},
+		"PREPROC DEFINITIONS": {
+			"fgColor": "entity.name.function.preprocessor"
+		},
+		"PREPROCESSOR": {
+			"fgColor": "entity.name.function.preprocessor"
+		},
+		"PREPROCESSOR COMMENT": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"PREPROCESSOR COMMENT DOC": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"PREPROCESSOR DIRECTIVE": {
+			"fgColor": "entity.name.function.preprocessor"
+		},
+		"PREPROCESSOR INLINE": {
+			"fgColor": "entity.name.function.preprocessor"
+		},
+		"PREPROCESSOR2": {
+			"fgColor": "entity.name.function.preprocessor"
+		},
+		"PREWORD1": {
+			"fgColor": "entity.name.constant.preprocessor"
+		},
+		"PREWORD2": {
+			"fgColor": "entity.name.constant.preprocessor"
+		},
+		"PROPERTY NAME": {
+			"fgColor": "variable.other.property"
+		},
+		"PROTOTYPE": {
+			"fgColor": "entity.name.type"
+		},
+		"PSEUDOCLASS": {
+			"fgColor": "entity.other.pseudo-class.css",
+			"fontStyle": "entity.other.pseudo-class.css"
+		},
+		"PSEUDOELEMENT": {
+			"fgColor": "entity.other.pseudo-element.css",
+			"fontStyle": "entity.other.pseudo-element.css"
+		},
+		"Q OPERATOR": {
+			"fgColor": "entity.name.function.operator"
+		},
+		"QUALIFIER": {
+			"fgColor": "variable.other.member"
+		},
+		"QUESTION MARK": {
+			"fgColor": "variable.other.constant"
+		},
+		"RAW BYTE STRING": {
+			"fgColor": "markup.raw"
+		},
+		"RAW STRING": {
+			"fgColor": "markup.raw"
+		},
+		"RAWSTRING": {
+			"fgColor": "markup.raw"
+		},
+		"RAWSTRING2": {
+			"fgColor": "markup.raw"
+		},
+		"RECCOUNT": {
+			"fgColor": "variable.other.event"
+		},
+		"RECORD": {
+			"fgColor": "variable.other.event"
+		},
+		"RECORD QUOTED": {
+			"fgColor": "string"
+		},
+		"RECSTART": {
+			"fgColor": "variable.other.event"
+		},
+		"RECTYPE": {
+			"fgColor": "entity.name.type"
+		},
+		"RECTYPE_UNKNOWN": {
+			"fgColor": "token.error-token"
+		},
+		"REFERENCE": {
+			"fgColor": "entity.name.type.class.reference"
+		},
+		"REFERENCE (TO A LABEL)": {
+			"fgColor": "entity.name.label"
+		},
+		"REGEX": {
+			"fgColor": "string.regexp punctuation.definition.string.begin"
+		},
+		"REGEX MATCH": {
+			"fgColor": "string.regexp punctuation.definition.string.begin"
+		},
+		"REGEX SUBSTITUTION": {
+			"fgColor": "keyword.other.substitution"
+		},
+		"REGEX VAR": {
+			"fgColor": "string.regexp punctuation.definition.string.begin"
+		},
+		"REGISTER": {
+			"fgColor": "variable.other.event"
+		},
+		"REGULAR STRING": {
+			"fgColor": "string"
+		},
+		"REMOVED KEY": {
+			"fgColor": "keyword"
+		},
+		"RESERVED WORDS": {
+			"fgColor": "string"
+		},
+		"RETURN": {
+			"fgColor": "variable.other.constant"
+		},
+		"SCALAR": {
+			"fgColor": "variable.other.member"
+		},
+		"SCRIPT TYPE": {
+			"fgColor": "entity.name.type"
+		},
+		"SECTION": {
+			"fgColor": "entity.name.operator.custom-literal"
+		},
+		"SECTION GROUP": {
+			"fgColor": "entity.name.operator.custom-literal"
+		},
+		"SECTION KEYWORDS": {
+			"fgColor": "entity.name.operator.custom-literal"
+		},
+		"SELF": {
+			"fgColor": "variable.other.constant"
+		},
+		"SENT": {
+			"fgColor": "variable.other.event"
+		},
+		"SERVER-GLOBAL VARIABLE (PREFIXED BY $)": {
+			"fgColor": "constant"
+		},
+		"SGML DEFAULT": {
+			"fgColor": "variable.other.member"
+		},
+		"SHORT COMMAND": {
+			"fgColor": "variable.other.event"
+		},
+		"SIMPLE STRING": {
+			"fgColor": "string"
+		},
+		"SINGLE QUOTED STRING": {
+			"fgColor": "string"
+		},
+		"SINGLE STRING": {
+			"fgColor": "string"
+		},
+		"SINGLE-LINE COMMENT": {
+			"fgColor": "comment",
+			"fontStyle": "comment"
+		},
+		"SPECIAL": {
+			"fgColor": "string"
+		},
+		"SPECIAL CHAR": {
+			"fgColor": "string"
+		},
+		"SPECIAL SELECTOR": {
+			"fgColor": "entity.other.attribute-name.parent-selector-suffix.css"
+		},
+		"STARTADDRESS": {
+			"fgColor": "entity.name.operator.custom-literal.number"
+		},
+		"STATEMENT": {
+			"fgColor": "variable.other.event"
+		},
+		"STATIC BUILT-IN OBJECT": {
+			"fgColor": "entity.name.function.member.static"
+		},
+		"STD FUNCTION": {
+			"fgColor": "entity.name.operator.custom-literal"
+		},
+		"STD OPERATOR": {
+			"fgColor": "entity.name.function.operator"
+		},
+		"STD PACKAGE": {
+			"fgColor": "variable.other.member"
+		},
+		"STD TYPE": {
+			"fgColor": "entity.name.type"
+		},
+		"STRIKEOUT": {
+			"fgColor": "variable.other.member"
+		},
+		"STRING": {
+			"fgColor": "string"
+		},
+		"STRING B": {
+			"fgColor": "string"
+		},
+		"STRING BACKTICKS": {
+			"fgColor": "string"
+		},
+		"STRING BLOCK": {
+			"fgColor": "punctuation.definition.block"
+		},
+		"STRING D": {
+			"fgColor": "string"
+		},
+		"STRING DOUBLE": {
+			"fgColor": "string"
+		},
+		"STRING DOUBLE QUOTE": {
+			"fgColor": "string"
+		},
+		"STRING DOUBLE QUOTES": {
+			"fgColor": "string"
+		},
+		"STRING DOUBLEQUOTE": {
+			"fgColor": "string"
+		},
+		"STRING DQ": {
+			"fgColor": "string"
+		},
+		"STRING EOL": {
+			"fgColor": "string"
+		},
+		"STRING EOL NC": {
+			"fgColor": "string"
+		},
+		"STRING EOL OPEN": {
+			"fgColor": "string"
+		},
+		"STRING ESCAPE": {
+			"fgColor": "string"
+		},
+		"STRING ESCAPE ERROR": {
+			"fgColor": "token.error-token"
+		},
+		"STRING L": {
+			"fgColor": "string"
+		},
+		"STRING LEFT QUOTE": {
+			"fgColor": "string"
+		},
+		"STRING Q": {
+			"fgColor": "string"
+		},
+		"STRING QQ": {
+			"fgColor": "string"
+		},
+		"STRING QR": {
+			"fgColor": "string"
+		},
+		"STRING QW": {
+			"fgColor": "string"
+		},
+		"STRING QX": {
+			"fgColor": "string"
+		},
+		"STRING Q_LANG": {
+			"fgColor": "string"
+		},
+		"STRING R": {
+			"fgColor": "string"
+		},
+		"STRING RAW": {
+			"fgColor": "markup.raw"
+		},
+		"STRING RIGHT QUOTE": {
+			"fgColor": "string"
+		},
+		"STRING SINGLE": {
+			"fgColor": "string"
+		},
+		"STRING SINGLE QUOTES": {
+			"fgColor": "string"
+		},
+		"STRING SINGLEQUOTE": {
+			"fgColor": "string"
+		},
+		"STRING SQ": {
+			"fgColor": "string"
+		},
+		"STRING VAR": {
+			"fgColor": "variable"
+		},
+		"STRING VARIABLE": {
+			"fgColor": "variable"
+		},
+		"STRING VERBATIM": {
+			"fontStyle": "log.verbose"
+		},
+		"STRING VERBATIM EOL": {
+			"fontStyle": "log.verbose"
+		},
+		"STRING VERBATIM SPECIAL": {
+			"fontStyle": "log.verbose"
+		},
+		"STRING WITH BRACES": {
+			"fgColor": "meta.brace.round"
+		},
+		"STRING WITH QUOTES": {
+			"fgColor": "string"
+		},
+		"STRING WITH THREE DOUBLE QUOTES": {
+			"fgColor": "string"
+		},
+		"STRING2": {
+			"fgColor": "string"
+		},
+		"STRONG": {
+			"fontStyle": "markup.bold"
+		},
+		"STRONG 2 (NOT USED)": {
+			"fontStyle": "markup.bold"
+		},
+		"SUB BRACE": {
+			"fgColor": "meta.brace.round"
+		},
+		"SUB SECTIONS": {
+			"fgColor": "entity.name.operator.custom-literal"
+		},
+		"SUBSECTION": {
+			"fgColor": "entity.name.operator.custom-literal"
+		},
+		"SUBSTITUTION": {
+			"fgColor": "keyword.other.substitution"
+		},
+		"SUPER": {
+			"fgColor": "variable.other.member"
+		},
+		"SYMBOL": {
+			"fgColor": "variable.parameter",
+			"fontStyle": "variable.parameter"
+		},
+		"SYMBOL TABLE": {
+			"fgColor": "keyword.operator.table.row.restructuredtext keyword.operator.table.data.restructuredtext"
+		},
+		"SYMBOLS": {
+			"fgColor": "variable.parameter",
+			"fontStyle": "variable.parameter"
+		},
+		"SYNTAX ERROR": {
+			"fgColor": "token.error-token"
+		},
+		"SYSTEM STORED PROC": {
+			"fgColor": "entity.name.constant.preprocessor"
+		},
+		"SYSTEM TABLE": {
+			"fgColor": "keyword.operator.table.row.restructuredtext keyword.operator.table.data.restructuredtext"
+		},
+		"TABLE": {
+			"fgColor": "keyword.operator.table.row.restructuredtext keyword.operator.table.data.restructuredtext"
+		},
+		"TABLE DEFINITIONS": {
+			"fgColor": "punctuation.definition.group"
+		},
+		"TABLE SQL": {
+			"fgColor": "keyword.operator.table.row.restructuredtext keyword.operator.table.data.restructuredtext"
+		},
+		"TAG": {
+			"fgColor": "entity.name.tag"
+		},
+		"TAG CLOSING": {
+			"fgColor": "punctuation.definition.tag"
+		},
+		"TAG END": {
+			"fgColor": "entity.name.tag"
+		},
+		"TAG OPENING": {
+			"fgColor": "punctuation.definition.tag"
+		},
+		"TAG UNKNOWN": {
+			"fgColor": "token.error-token"
+		},
+		"TAG { &lt;TITLE HEIGHT=100&gt; }": {
+			"fgColor": "punctuation.definition.tag"
+		},
+		"TAGNAME": {
+			"fgColor": "punctuation.definition.tag"
+		},
+		"TARGET": {
+			"fgColor": "variable.other.member"
+		},
+		"TASK START/END": {
+			"fgColor": "variable.other.event"
+		},
+		"TEXT": {
+			"fgColor": "text"
+		},
+		"TIME { 12:30 11:22:59 01:59:59.123 }": {
+			"fgColor": "source.git-show.date"
+		},
+		"TRANSLATION": {
+			"fgColor": "variable.other.event"
+		},
+		"TRIPLE": {
+			"fgColor": "entity.name.operator.custom-literal.number"
+		},
+		"TRIPLE DOUBLE": {
+			"fgColor": "string"
+		},
+		"TRIPLE DOUBLE QUOTES": {
+			"fgColor": "string"
+		},
+		"TRIPLE QUOTES": {
+			"fgColor": "string"
+		},
+		"TRIPLE STRING DQ": {
+			"fgColor": "string"
+		},
+		"TRIPLE STRING SQ": {
+			"fgColor": "string"
+		},
+		"TUPLE ( 127.0.0.1 )": {
+			"fgColor": "entity.name.operator.custom-literal.number"
+		},
+		"TYPE": {
+			"fgColor": "entity.name.type"
+		},
+		"TYPE WORD": {
+			"fgColor": "entity.name.type"
+		},
+		"TYPEDEF": {
+			"fgColor": "entity.name.type"
+		},
+		"TYPES": {
+			"fgColor": "entity.name.type"
+		},
+		"ULIST": {
+			"fgColor": "variable.other.constant"
+		},
+		"UNKNOWN IDENTIFIER": {
+			"fgColor": "token.error-token"
+		},
+		"UNKNOWN OPCODE": {
+			"fgColor": "token.error-token"
+		},
+		"UNKNOWN PSEUDOCLASS": {
+			"fgColor": "token.error-token"
+		},
+		"UNKNOWN: ERROR": {
+			"fgColor": "token.error-token"
+		},
+		"URI": {
+			"fgColor": "constant"
+		},
+		"URL { FTP://THERE.DOM }": {
+			"fgColor": "editorLink.activeForeground",
+			"fontSize": "markup.underline.link"
+		},
+		"USER": {
+			"fgColor": "variable.parameter",
+			"fontStyle": "variable.parameter"
+		},
+		"USER ATTRIBUTES 1": {
+			"fgColor": "editorBracketHighlight.foreground1"
+		},
+		"USER ATTRIBUTES 2": {
+			"fgColor": "editorBracketHighlight.foreground2"
+		},
+		"USER ATTRIBUTES 3": {
+			"fgColor": "editorBracketHighlight.foreground3"
+		},
+		"USER ATTRIBUTES 4": {
+			"fgColor": "editorBracketHighlight.foreground4"
+		},
+		"USER ATTRIBUTES 5": {
+			"fgColor": "editorBracketHighlight.foreground5"
+		},
+		"USER ATTRIBUTES 6": {
+			"fgColor": "editorBracketHighlight.foreground6"
+		},
+		"USER ATTRIBUTES 7": {
+			"fgColor": "editorBracketHighlight.foreground1"
+		},
+		"USER ATTRIBUTES 8": {
+			"fgColor": "editorBracketHighlight.foreground2"
+		},
+		"USER ATTRIBUTES1": {
+			"fgColor": "editorBracketHighlight.foreground1"
+		},
+		"USER ATTRIBUTES2": {
+			"fgColor": "editorBracketHighlight.foreground2"
+		},
+		"USER ATTRIBUTES3": {
+			"fgColor": "editorBracketHighlight.foreground3"
+		},
+		"USER ATTRIBUTES4": {
+			"fgColor": "editorBracketHighlight.foreground4"
+		},
+		"USER DEFINE": {
+			"fgColor": "punctuation.definition.group"
+		},
+		"USER DEFINED": {
+			"fgColor": "punctuation.definition.group"
+		},
+		"USER KEYWORDS": {
+			"fgColor": "keyword"
+		},
+		"USER KEYWORDS 1": {
+			"fgColor": "editorBracketHighlight.foreground1"
+		},
+		"USER KEYWORDS 2": {
+			"fgColor": "editorBracketHighlight.foreground2"
+		},
+		"USER KEYWORDS 3": {
+			"fgColor": "editorBracketHighlight.foreground3"
+		},
+		"USER KEYWORDS 4": {
+			"fgColor": "editorBracketHighlight.foreground4"
+		},
+		"USER KEYWORDS 5": {
+			"fgColor": "editorBracketHighlight.foreground5"
+		},
+		"USER KEYWORDS 6": {
+			"fgColor": "editorBracketHighlight.foreground6"
+		},
+		"USER KEYWORDS 7": {
+			"fgColor": "editorBracketHighlight.foreground1"
+		},
+		"USER KEYWORDS 8": {
+			"fgColor": "editorBracketHighlight.foreground2"
+		},
+		"USER SCALAR 1": {
+			"fgColor": "editorBracketHighlight.foreground1"
+		},
+		"USER SCALAR 2": {
+			"fgColor": "editorBracketHighlight.foreground2"
+		},
+		"USER SCALAR 3": {
+			"fgColor": "editorBracketHighlight.foreground3"
+		},
+		"USER SCALAR 4": {
+			"fgColor": "editorBracketHighlight.foreground4"
+		},
+		"USER TAGS1": {
+			"fgColor": "editorBracketHighlight.foreground1"
+		},
+		"USER TAGS2": {
+			"fgColor": "editorBracketHighlight.foreground2"
+		},
+		"USER TAGS3": {
+			"fgColor": "editorBracketHighlight.foreground3"
+		},
+		"USER TAGS4": {
+			"fgColor": "editorBracketHighlight.foreground4"
+		},
+		"USER1": {
+			"fgColor": "editorBracketHighlight.foreground1"
+		},
+		"VALID OPCODE": {
+			"fgColor": "variable.other.member"
+		},
+		"VALUE": {
+			"fgColor": "entity.name.type.class.value"
+		},
+		"VALUE NAME": {
+			"fgColor": "entity.name.type"
+		},
+		"VALUE TYPE": {
+			"fgColor": "entity.name.type"
+		},
+		"VAR": {
+			"fgColor": "variable"
+		},
+		"VAR IN BACKTICKS": {
+			"fgColor": "string"
+		},
+		"VAR IN HEREDOC BACKTICK": {
+			"fgColor": "string"
+		},
+		"VAR IN HEREDOC DOUBLEQUOTE": {
+			"fgColor": "string"
+		},
+		"VAR IN REGEX": {
+			"fgColor": "string.regexp punctuation.definition.string.begin"
+		},
+		"VAR IN REGEX SUBSTITUTION": {
+			"fgColor": "variable.other.substitution"
+		},
+		"VAR IN STRING": {
+			"fgColor": "variable"
+		},
+		"VAR IN STRING QQ": {
+			"fgColor": "variable"
+		},
+		"VAR IN STRING QR": {
+			"fgColor": "variable"
+		},
+		"VAR IN STRING QX": {
+			"fgColor": "variable"
+		},
+		"VARIABLE": {
+			"fgColor": "variable"
+		},
+		"VERBATIM": {
+			"fontStyle": "log.verbose"
+		},
+		"VERBATIM SEGMENT": {
+			"fontStyle": "log.verbose"
+		},
+		"VERBOSE REGEX": {
+			"fgColor": "string.regexp punctuation.definition.string.begin"
+		},
+		"VERBOSE REGEX COMMENT": {
+			"fgColor": "string.regexp punctuation.definition.string.begin"
+		},
+		"WHILEDEF": {
+			"fgColor": "punctuation.definition.group"
+		},
+		"WHITE SPACE": {
+			"fgColor": "editorWhitespace.foreground"
+		},
+		"WHITESPACE": {
+			"fgColor": "editorWhitespace.foreground"
+		},
+		"WINDOW INSTRUCTION": {
+			"fgColor": "entity.name.function"
+		},
+		"WORD": {
+			"fgColor": "string"
+		},
+		"WORD IN QUOTE": {
+			"fgColor": "string"
+		},
+		"WORD2": {
+			"fgColor": "string"
+		},
+		"XML END": {
+			"fgColor": "punctuation.definition.tag"
+		},
+		"XML START": {
+			"fgColor": "punctuation.definition.tag"
+		}
+	}
+}
