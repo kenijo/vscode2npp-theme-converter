@@ -190,7 +190,15 @@ if (isset($_POST['foregroundColorInput']) && $_POST['foregroundColorInput'] != '
                                         style="opacity: 100; background-color: <?= $foregroundColorInputPalette ?>;">
                                 <?php } ?>
                             </fieldset>
-                            <fieldset id="backgroundGroup" role="group" style="visibility: hidden;">
+                            <fieldset id="backgroundGroup" role="group" <?php
+                            $foregroundColorFormatArray = [
+                                'HEXA',
+                                'RGBA'
+                            ];
+                            if (!in_array($foregroundColorFormat, $foregroundColorFormatArray)) {
+                                ?> style="visibility: hidden;" <?php
+                            }
+                            ?>>
                                 <select id="backgroundColorFormat" name="backgroundColorFormat">
                                     <?php
                                     $backgroundColorFormatArray = [
