@@ -1,13 +1,11 @@
 <?php
 
 // TODO: generate matching Markdown color file
-// TODO: update index.htm to handle Markdown
 // TODO: Take external mapping file as an imput
 // TODO: Add textbox to input theme name and add it to the XML comments
-// TODO: generate config.xml line for colors
+// TODO: generate config.xml line for DarkTheme colors
 // TODO: colors are saved as decimal, RGB is inverted. Check https://www.checkyourmath.com/convert/color/decimal_rgb.php
 // TODO: better handle markup.bold / makrup.italic / markup.underline
-// TODO: download the stylers.model.xml directly form NotePad++ GitHub to always get the latest version
 // TODO: finish mapping file for Notepad++ searchResult and GlobalStyles
 // TODO: include the dark theme conversion values
 
@@ -33,13 +31,19 @@ if ($is_web) {
     }
 }
 
+// Create a cache folder for temporary files
+$folder = 'cache';
+if (!file_exists($folder)) {
+    mkdir($folder, 0777, true);
+}
+
 $MAPPING_FILE = 'mapping.json';
 $NPP_STYLERS_MODEL_FILE = downloadStylers();
 
 // Load the JSON and XML files
 $mapping = loadJson($MAPPING_FILE, 'DELETE');
 $vscodeTheme = loadJson($VSCODE_THEME_JSON, 'TOGGLE');
-$nppTheme = loadXml($NPP_STYLERS_MODEL_FILE);
+$nppStylers = loadXml($NPP_STYLERS_MODEL_FILE);
 
 // Match keys and assign colors
 try {
@@ -56,33 +60,33 @@ try {
     }
 
     // Retrieve settings from VSCode Theme and assign them to the mapping file
-    foreach ($mapping as $section => $sectionContent) {
+    foreach ($mapping as $mappingSections => $mappingSection) {
         // Loop through the mapping JSON
-        foreach ($sectionContent as $nppKey => $nppSettings) {
-            foreach ($nppSettings as $nppSetting => $vscodeKey) {
+        foreach ($mappingSection as $nppElements => $nppElement) {
+            foreach ($nppElement as $nppAttribute => $vscodeKey) {
                 // Initialize the setting value to an empty string
-                $vscodeSetting = '';
+                $vscodeKeyValue = '';
 
                 // Check if the VSCode key exists in the 'colors' section of the VSCode Theme JSON
                 if (isset($vscodeColors[$vscodeKey])) {
-                    $vscodeSetting = $vscodeColors[$vscodeKey];
+                    $vscodeKeyValue = $vscodeColors[$vscodeKey];
                 }
                 // Check if the VSCode key exists in the tokenMap (preprocessed tokenColors)
                 if (isset($tokenMap[$vscodeKey])) {
-                    switch ($nppSetting) {
+                    switch ($nppAttribute) {
                         case 'bgColor':
-                            $vscodeSetting = $tokenMap[$vscodeKey]['background'];
+                            $vscodeKeyValue = $tokenMap[$vscodeKey]['background'];
                             break;
                         case 'fgColor':
-                            $vscodeSetting = $tokenMap[$vscodeKey]['foreground'];
+                            $vscodeKeyValue = $tokenMap[$vscodeKey]['foreground'];
                             break;
                         case 'fontStyle':
-                            $vscodeSetting = mapFontStyle($tokenMap[$vscodeKey]['fontStyle']);
+                            $vscodeKeyValue = mapFontStyle($tokenMap[$vscodeKey]['fontStyle']);
                             break;
                     }
                 }
                 // Set setting in mapping
-                $mapping[$section][$nppKey][$nppSetting] = $vscodeSetting;
+                $mapping[$mappingSections][$nppElements][$nppAttribute] = $vscodeKeyValue;
             }
         }
     }
@@ -96,18 +100,24 @@ try {
     ];
 
     $comment = PHP_EOL;
-    $comment .= "\t\tNotepad++ Theme converted from VSCode Theme using VSCODE2NPP\n";
-    $comment .= "\t\tAvailable at <URL>\n";
+    $comment .= "  Notepad++ Theme converted from VSCode Theme using VSCODE2NPP\n";
+    $comment .= "  Available at <URL>\n";
     $comment .= "\n";
-    $comment .= "\t\tTo complement the Notepad++ Theme, we suggest the following Dark Mode Tones:\n";
+    $comment .= "  To complement the Notepad++ Theme, we suggest the following Dark Mode Tones:\n";
 
     // Loop through the Dark Mode Tones and add them as comment to the Notepad++ Theme for reference
-    foreach ($mapping['DarkModeTones'] as $nppKey => $nppSettings) {
-        foreach ($nppSettings as $nppSetting => $vscodeSetting) {
-            $hex = strtoupper(hexa2hex($defaultSetting['bgColor'], $vscodeSetting));
+    foreach ($mapping['DarkModeTones'] as $nppElements => $nppElement) {
+        foreach ($nppElement as $nppAttribute => $vscodeKey) {
+            if (is_hex($vscodeKey)) {
+                $hex = strtoupper($vscodeKey);
+            } elseif (is_hexa($vscodeKey)) {
+                $hex = strtoupper(hexa2hex($vscodeKey, $defaultSetting['bgColor']));
+            }
             $rgb = strtoupper(hex2rgb($hex));
-            $comment .= "\t\t\t\t$nppKey: $hex / $rgb\n";
-            $darkMode[$nppKey] = [
+
+            $spaces = str_repeat(' ', 15 - strlen($nppElements));
+            $comment .= "    $nppElements:$spaces$hex / $rgb\n";
+            $darkMode[$nppElements] = [
                 'hex' => $hex,
                 'rgb' => $rgb
             ];
@@ -115,53 +125,51 @@ try {
     }
 
     // Create a XML comment
-    $xmlCommment = $nppTheme->createComment($comment);
+    $xmlCommment = $nppStylers->createComment($comment);
 
     // Insert the XML comment at the top of the document
-    if ($nppTheme->firstChild) {
-        $nppTheme->insertBefore($xmlCommment, $nppTheme->firstChild);
+    if ($nppStylers->firstChild) {
+        $nppStylers->insertBefore($xmlCommment, $nppStylers->firstChild);
     } else {
-        $nppTheme->appendChild($xmlCommment);
+        $nppStylers->appendChild($xmlCommment);
     }
 
-    foreach (['WidgetStyle', 'WordsStyle'] as $section) {
-        initializeElements($defaultSetting, $nppTheme, $section);
+    foreach (['WidgetStyle', 'WordsStyle'] as $mappingSection) {
+        initializeElements($defaultSetting, $nppStylers, $mappingSection);
 
-        foreach ($mapping[$section] as $nppKey => $nppSettings) {
+        foreach ($mapping[$mappingSection] as $nppElements => $nppElement) {
             // Use XPath to find the specific element
-            $xpath = new DOMXPath($nppTheme);
-            $elements = $xpath->query("//" . $section . "[@name='$nppKey']");
+            $xpath = new DOMXPath($nppStylers);
+            $elements = $xpath->query("//" . $mappingSection . "[@name='$nppElements']");
 
             foreach ($elements as $element) {
-                foreach ($nppSettings as $nppSetting => $vscodeSetting) {
+                foreach ($nppElement as $nppAttribute => $vscodeKey) {
                     // Set setting in XML
-                    if (substr($vscodeSetting, 0, 1) === "#") {
-                        $vscodeSetting = hexa2hex($defaultSetting['bgColor'], $vscodeSetting);
-                        $vscodeSetting = ltrim($vscodeSetting, '#');
+                    if (is_hex($vscodeKey)) {
+                        $hex = strtoupper($vscodeKey);
+                    } elseif (is_hexa($vscodeKey)) {
+                        $hex = strtoupper(hexa2hex($vscodeKey, $defaultSetting['bgColor']));
                     }
-                    $element->setAttribute($nppSetting, $vscodeSetting);
+                    $hex = ltrim($hex, '#');
+
+                    $element->setAttribute($nppAttribute, $hex);
                 }
             }
         }
     }
 
-    // Create a cache folder and build the filename string
-    //$folder = 'cache';
-    //if (!file_exists($folder)) {
-    //    mkdir($folder, 0777, true);
-    //}
-    //$filename = 'npp_theme.xml';
+    $filesToZip = [
+        $nppStylers->saveXML() => 'npp_theme.xml',
+        'markdownTheme' => 'markdownTheme' // replace with markdownTheme once I get it generated
+    ];
+    $zipFilename = zipFiles($filesToZip);
 
-    // Save the new Theme on the server
-    //$nppTheme->save('cache' . DIRECTORY_SEPARATOR . $filename);
-
-    // Output Notepad++ DarkMode, Theme, and Markdown
+    // Output Notepad++ DarkMode and Theme as Zip file
     $data = [
         'darkMode' => $darkMode,
-        'nppTheme' => $nppTheme->saveXML(),
-        'markdownTheme' => ''
+        'zipFilename' => $zipFilename
     ];
-    echo json_encode($data);
+    echo json_encode($data, JSON_PRETTY_PRINT);
 } catch (Exception $e) {
     echo $e->getMessage();
 }
@@ -175,6 +183,7 @@ function downloadStylers()
 {
     $filename = 'stylers.model.xml';
     $url = 'https://raw.githubusercontent.com/notepad-plus-plus/notepad-plus-plus/refs/heads/master/PowerEditor/src/' . $filename;
+    $filename = 'cache' . DIRECTORY_SEPARATOR . $filename;
 
     // Check if the file exists and is less than 1 week old
     if (file_exists($filename) && filemtime($filename) > strtotime('-1 week')) {
@@ -206,7 +215,7 @@ function downloadStylers()
     if (file_put_contents($filename, $xmlContent) !== false) {
         return $xmlContent;
     } else {
-        echo 'Error writing file.';
+        echo 'Error writing file';
         return false;
     }
 }
@@ -225,7 +234,7 @@ function initializeElements($defaultSetting, $xml, $xmlElementName)
     $defaultSetting['bgColor'] = ltrim($defaultSetting['bgColor'], '#');
     $defaultSetting['fgColor'] = ltrim($defaultSetting['fgColor'], '#');
 
-    // Find all elements with name attribute equal to $nppKey
+    // Find all elements with name attribute equal to $nppElements
     $elements = $xml->getElementsByTagName($xmlElementName);
     foreach ($elements as $element) {
         foreach (['bgColor', 'fgColor', 'fontName', 'fontStyle', 'fontSize'] as $attribute) {
@@ -263,7 +272,7 @@ function initializeElements($defaultSetting, $xml, $xmlElementName)
  */
 function loadJson($json, $cleanComments = null)
 {
-    // Read the JSON from the file if a filename is provided, other read it from the string
+    // Read the JSON from the file if a filename is provided, otherwise read it from the string
     $jsonString = is_file($json) && file_exists($json) ? file_get_contents($json) : $json;
 
     if ($jsonString === false) {
@@ -273,12 +282,16 @@ function loadJson($json, $cleanComments = null)
     // Clean comments based on the specified method
     switch ($cleanComments) {
         case 'DELETE':
-            $jsonString = preg_replace('/\/\/.*$/', '', $jsonString);
+            $jsonString = preg_replace('/\/\/\s*".*/', '', $jsonString);
             break;
         case 'TOGGLE':
-            $jsonString = str_replace('//', '', $jsonString);
+            $jsonString = preg_replace('/\/\/\s*"/', '"', $jsonString);
             break;
     }
+
+    // Remove trailing commas
+    $jsonString = preg_replace('/,\s*}/', '}', $jsonString);
+    $jsonString = preg_replace('/,\s*]/', ']', $jsonString);
 
     // Decode the JSON string
     $jsonData = json_decode($jsonString, true);
@@ -411,4 +424,23 @@ function sortElements($xml)
             sortElements($child);
         }
     }
+}
+
+/**
+ * Function that zips files
+ *
+ * @param   array   $filesToZip     List of files to zip
+ * @return  string                  The zip filename
+ */
+function zipFiles($filesToZip)
+{
+    $zip = new ZipArchive();
+    $zipFilename = tempnam('cache', 'npp_');
+    $zip->open($zipFilename, ZipArchive::CREATE | ZipArchive::OVERWRITE);
+    foreach ($filesToZip as $string => $filename) {
+        $zip->addFromString($filename, $string);
+    }
+    $zip->close();
+
+    return $zipFilename;
 }
