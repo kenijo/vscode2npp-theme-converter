@@ -4,29 +4,25 @@ Generates Notepad++ Theme from VSCode Theme (XML Theme, Markdown Theme, and Dark
 
 ## How To
 
-Open VSCode and select your theme of choice.
+* Open VSCode and select your theme of choice.
 
-Run the following command to generate a color theme: CTRL+P >> Developer: Generate Color Theme From Current Settings
+* Run the following command to generate a color theme: CTRL+P >> Developer: Generate Color Theme From Current Settings
 
-Paste the color theme generated in the text box VSCode Theme (JSON).
+* Save the color theme generated as a JSON file.
 
-Click convert.
+* Click convert and the Notepad++ theme will download automaticaly once the conversion is done.
 
-Copy Notepad++ Theme (XML) and save it into the Notepad++ themes folder.
+* Copy Notepad++ Theme (XML) and save it into the Notepad++ themes folder.
 
-You can use the matching dark mode tones to further improve the theme integration.
+* You can use the matching dark mode tones to further improve the theme integration.
 
 # Color Converter
 
-Convert color to and from the following format:
+* Colors with an alpha channel are computed by providing a background color to blend the foreground color onto.
 
-* Decimal (DEC)
-* Hexadecimal (HEX)
-* Hexadecimal with Alpha channel (HEXA)
-* RGB
-* RGBA (RGB with Alpha channel)
+* The default background color used is white unless otherwise specified.
 
-Notes: Alpha channel is computed by providing a background color to blend the foreground color onto. (The default background color used is white)
+* Use this Color Converter to convert color to and from the following format: DEC, HEX, HEXA, RGB, RGBA
 
 ## Requirements
 
