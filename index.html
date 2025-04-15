@@ -99,21 +99,21 @@
                             </label>
                             <select id="fontSizeCustomLabel" hidden="hidden" required>
                                 <option value="" selected>Select…</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>8</option>
-                                <option>9</option>
-                                <option>10</option>
-                                <option selected>11 (default)</option>
-                                <option>14</option>
-                                <option>16</option>
-                                <option>18</option>
-                                <option>20</option>
-                                <option>22</option>
-                                <option>24</option>
-                                <option>26</option>
-                                <option>28</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11" selected>11 (Default)</option>
+                                <option value="14">14</option>
+                                <option value="16">16</option>
+                                <option value="18">18</option>
+                                <option value="20">20</option>
+                                <option value="22">22</option>
+                                <option value="24">24</option>
+                                <option value="26">26</option>
+                                <option value="26">28</option>
                             </select>
                         </fieldset>
                     </div>
@@ -269,6 +269,8 @@
                 document.getElementById("convert").value = "Please wait...";
 
                 var vscodeJsonData = document.getElementById("vscode_json").value;
+                var fontNameCustomLabel = document.getElementById("fontNameCustomLabel").value;
+                var fontSizeCustomLabel = document.getElementById("fontSizeCustomLabel").value;
 
                 // Cleanup JSON from comments and trailing comas
                 vscodeJsonData = vscodeJsonData.replace(/\/\/\s*".*/, '');
@@ -278,7 +280,11 @@
                 $.ajax({
                     url: "vscode2npp.php",
                     type: "POST",
-                    data: { vscode_json: vscodeJsonData },
+                    data: {
+                        vscode_json: vscodeJsonData,
+                        npp_font_name: fontNameCustomLabel,
+                        npp_font_size: fontSizeCustomLabel,
+                    },
                     dataType: "json",
                     success: function (result) {
                       document.getElementById("npp_xml").innerHTML = result["nppStylers"];

@@ -101,12 +101,15 @@ try {
         }
     }
 
+    $npp_font_name = $_POST['npp_font_name'] ?? 'Courier New';
+    $npp_font_size = $_POST['npp_font_size'] ?? 11;
+
     $defaultSetting = [
         'bgColor' => $mapping['WidgetStyle']['Default Style']['bgColor'],
         'fgColor' => $mapping['WidgetStyle']['Default Style']['fgColor'],
-        'fontName' => 'Courier New',
+        'fontName' => $npp_font_name,
         'fontStyle' => 0,
-        'fontSize' => 11
+        'fontSize' => $npp_font_size
     ];
 
     $comment = PHP_EOL;
@@ -173,7 +176,7 @@ try {
         'markdownTheme' => 'markdownTheme' // replace with markdownTheme once I get it generated
     ];
     $zipFilename = zipFiles($filesToZip);
-    $zipFilename = substr($zipFilename, strrpos($zipFilename, '/')+1);
+    $zipFilename = substr($zipFilename, strrpos($zipFilename, '/') + 1);
 
     // Output Notepad++ DarkMode and Theme as Zip file
     $data = [
