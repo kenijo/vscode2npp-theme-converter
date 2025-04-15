@@ -12,6 +12,9 @@
 // Include libraries
 require_once __DIR__ . '/library/func.color.php';
 
+// Define the base path for the application
+define('BASE_PATH', __DIR__ . DIRECTORY_SEPARATOR);
+
 // Check to see if the script is running in a web context
 $is_web = http_response_code() !== FALSE;
 if ($is_web) {
@@ -31,10 +34,17 @@ if ($is_web) {
     }
 }
 
-// Create a cache folder for temporary files
-$folder = 'cache';
-if (!file_exists($folder)) {
-    mkdir($folder, 0777, true);
+// Set up cache location for SimplePie
+$location = BASE_PATH . 'cache' . DIRECTORY_SEPARATOR;
+// Check if cache directory exists, if not try to create it
+if (!file_exists($location)) {
+    if (is_dir(BASE_PATH) && is_writable(BASE_PATH)) {
+        mkdir($location, 0755, true);
+    }
+}
+// Fallback to system temp directory if cache location isn't writable
+if (!is_dir($location) || !is_writable($location)) {
+    $location = sys_get_temp_dir();
 }
 
 $MAPPING_FILE = 'mapping.json';
@@ -163,6 +173,7 @@ try {
         'markdownTheme' => 'markdownTheme' // replace with markdownTheme once I get it generated
     ];
     $zipFilename = zipFiles($filesToZip);
+    $zipFilename = substr($zipFilename, strrpos($zipFilename, '/')+1);
 
     // Output Notepad++ DarkMode and Theme as Zip file
     $data = [
@@ -183,7 +194,7 @@ function downloadStylers()
 {
     $filename = 'stylers.model.xml';
     $url = 'https://raw.githubusercontent.com/notepad-plus-plus/notepad-plus-plus/refs/heads/master/PowerEditor/src/' . $filename;
-    $filename = 'cache' . DIRECTORY_SEPARATOR . $filename;
+    $filename = BASE_PATH . 'cache' . DIRECTORY_SEPARATOR . $filename;
 
     // Check if the file exists and is less than 1 week old
     if (file_exists($filename) && filemtime($filename) > strtotime('-1 week')) {
@@ -434,8 +445,13 @@ function sortElements($xml)
  */
 function zipFiles($filesToZip)
 {
+    $location = BASE_PATH . 'cache' . DIRECTORY_SEPARATOR;
+
     $zip = new ZipArchive();
-    $zipFilename = tempnam('cache', 'npp_');
+    $zipFilename = tempnam($location, '');
+    unlink($zipFilename);
+    $zipFilename = basename($zipFilename, '.tmp');
+    $zipFilename = $location . 'VSCODE2NPP_' . $zipFilename . '.zip';
     $zip->open($zipFilename, ZipArchive::CREATE | ZipArchive::OVERWRITE);
     foreach ($filesToZip as $string => $filename) {
         $zip->addFromString($filename, $string);
