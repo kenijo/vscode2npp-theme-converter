@@ -276,12 +276,19 @@ if (isset($_POST['foregroundColorInput']) && $_POST['foregroundColorInput'] != '
             document.getElementById("colorRGBAButton").addEventListener("click", copyToClipboard);
 
             document.getElementById("foregroundColorFormat").addEventListener("change", updateBackgroundGroupVisibility);
+            document.getElementById("backgroundColorFormat").addEventListener("change", clearColorInput);
 
             function copyToClipboard() {
                 navigator.clipboard.writeText(this.innerText);
             }
 
+            function clearColorInput() {
+                document.getElementById("backgroundColorInput").value = "";
+            }
+
             function updateBackgroundGroupVisibility() {
+                document.getElementById("foregroundColorInput").value = "";
+
                 if (this.value == 'HEXA' || this.value == 'RGBA') {
                     document.getElementById("backgroundGroup").style.visibility = "visible";
                 } else {
