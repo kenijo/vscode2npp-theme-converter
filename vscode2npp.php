@@ -48,7 +48,9 @@ if (!is_dir($location) || !is_writable($location)) {
 }
 
 $MAPPING_FILE = 'mapping.json';
-$NPP_STYLERS_MODEL_FILE = downloadStylers();
+$NPP_STYLERS_MODEL_FILE = downloadFile('https://raw.githubusercontent.com/notepad-plus-plus/notepad-plus-plus/refs/heads/master/PowerEditor/src/stylers.model.xml');
+$NPP_MARKDOWN_FILE = downloadFile('https://raw.githubusercontent.com/notepad-plus-plus/notepad-plus-plus/refs/heads/master/PowerEditor/bin/userDefineLangs/markdown._preinstalled.udl.xml');
+$NPP_MARKDOWN_DM_FILE = downloadFile('https://raw.githubusercontent.com/notepad-plus-plus/notepad-plus-plus/refs/heads/master/PowerEditor/bin/userDefineLangs/markdown._preinstalled_DM.udl.xml');
 
 // Load the JSON and XML files
 $mapping = loadJson($MAPPING_FILE, 'DELETE');
@@ -189,15 +191,17 @@ try {
 }
 
 /**
- * Download stylers.model.xml from GitHub repository
+ * Download a given file from its URL
  *
- * @return string The content of the downloaded stylers.model.xml or the path to a stylers.model.xml
+ * @return string The content of the downloaded file or the path of the file
  */
-function downloadStylers()
+function downloadFile($url)
 {
-    $filename = 'stylers.model.xml';
-    $url = 'https://raw.githubusercontent.com/notepad-plus-plus/notepad-plus-plus/refs/heads/master/PowerEditor/src/' . $filename;
+    $filename = substr($url, strrpos($url, '/') + 1);
     $filename = BASE_PATH . 'cache' . DIRECTORY_SEPARATOR . $filename;
+
+    echo $filename . "\n";
+    echo $url . "\n";
 
     // Check if the file exists and is less than 1 week old
     if (file_exists($filename) && filemtime($filename) > strtotime('-1 week')) {
