@@ -1,10 +1,10 @@
 # ============================================================
 # Project Files to ignore
 # ============================================================
-.vscode
-*.code-workspace
-cache/*
-test/*
+.vscode/pro-deployer.json
+cache/**/*
+test/**/*
+vendor/**/*
 
 # ============================================================
 # Windows System Files
